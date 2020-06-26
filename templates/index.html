@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="static/bank-note-authentication-master/images/icons/icon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bank-note-authentication-master/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bank-note-authentication-master/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bank-note-authentication-master/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bank-note-authentication-master/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="static/bank-note-authentication-master/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bank-note-authentication-master/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/bank-note-authentication-master/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/bank-note-authentication-master/css/main.css">
+	<link rel="stylesheet" href="static/bank-note-authentication-master/style1.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<!--===============================================================================================-->
+    <title>Bank Note Authenticator</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="#Authenticator" class="active">Bank Note Authenticator</a>
+  <a href="#howtouse">How to use ?</a>
+  <a href="https://aman-preet-singh-gulati.github.io/Aman-Preet-Singh-Gulati/" target="_blank">My Portfolio</a>
+  <a href="#about">About this project</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+ 
+
+
+    <section>
+	
+       <div class="limiter">
+	   <div class="container-login100" style="background-image: url('images/1.png');">
+
+
+			<div class="wrap-login100 p-t-190 p-b-30">
+
+<!-- <div>
+       <center>
+   <h1>{{ prediction_text }}</h1>
+       </center>
+</div> -->
+
+				<form action="{{ url_for('predict')}}"method="post" class="login100-form validate-form">
+
+
+
+
+
+					<div class="login100-form-avatar">
+						<img src="static/bank-note-authentication-master/images/avatar-01.jpg" alt="BNA">
+					</div>
+
+					<span class="login100-form-title p-t-20 p-b-45">
+						Bank Note Authentication
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Variance is required">
+						<input class="input100" type="text" name="variance" placeholder=" Enter Variance of note">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-inr"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Skewness is required">
+						<input class="input100" type="text" name="skewness" placeholder=" Enter Skewness of note">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-inr"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Curtosis is required">
+						<input class="input100" type="text" name="curtosis" placeholder=" Enter Curtosis of note">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-inr"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Entropy is required">
+						<input class="input100" type="text" name="entropy" placeholder=" Enter Entropy of note">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-inr"></i>
+						</span>
+					</div>
+
+					<div class="container-login100-form-btn p-t-10">
+						<button class="login100-form-btn">
+							Predict
+						</button>
+					</div>
+
+					<div class="text-center w-full p-t-25 p-b-230">
+
+
+					<div class="text-center w-full">
+            
+            <center><strong><h2>{{ prediction_text }}</h2></strong><center>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+	   
+	   
+	   
+	   <!--===============================================================================================-->	
+	<script src="static/bank-note-authentication-master/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bank-note-authentication-master/vendor/bootstrap/js/popper.js" ></script>
+	<script src="static/bank-note-authentication-master/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/bank-note-authentication-master/vendor/select2/select2.min.css"></script>
+<!--===============================================================================================-->
+	<script src="static/bank-note-authentication-master/js/main.js"></script>
+	   
+	   
+	   <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+	   
+	   
+	   
+	   
+	   
+        <div class="leaves">
+            <div><img src="static/png1-effect1.png" alt=""></div>
+            <div><img src="static/png2-effect2.png" alt=""></div>
+            <div><img src="static/png3-effect3.png" alt=""></div>
+            <div><img src="static/png4-effect4.png" alt=""></div>
+            <div><img src="static/png1-effect1.png" alt=""></div>
+            <div><img src="static/png2-effect2.png" alt=""></div>
+            <div><img src="static/png3-effect3.png" alt=""></div>
+            <div><img src="static/png4-effect4.png" alt=""></div>
+        </div>
+        <div class="leaves set2">
+            <div><img src="static/png1-effect1.png" alt=""></div>
+            <div><img src="static/png2-effect2.png" alt=""></div>
+            <div><img src="static/png3-effect3.png" alt=""></div>
+            <div><img src="static/png4-effect4.png" alt=""></div>
+            <div><img src="static/png1-effect1.png" alt=""></div>
+            <div><img src="static/png2-effect2.png" alt=""></div>
+            <div><img src="static/png3-effect3.png" alt=""></div>
+            <div><img src="static/png4-effect4.png" alt=""></div>
+        </div>
+        <div class="leaves set3">
+            <div><img src="static/png1-effect1.png" alt=""></div>
+            <div><img src="static/png2-effect2.png" alt=""></div>
+            <div><img src="static/png3-effect3.png" alt=""></div>
+            <div><img src="static/png4-effect4.png" alt=""></div>
+            <div><img src="static/png1-effect1.png" alt=""></div>
+            <div><img src="static/png2-effect2.png" alt=""></div>
+            <div><img src="static/png3-effect3.png" alt=""></div>
+            <div><img src="static/png4-effect4.png" alt=""></div>
+        </div>
+    </section>
+	
+</body>
+</html>
